@@ -1,0 +1,31 @@
+{
+  "dataset": "Kaggle Solar Power Generation Data (Plant 1)",
+  "dataset_url": "https://www.kaggle.com/datasets/anikannal/solar-power-generation-data",
+  "license_note": "课程实验迁移分析；原始数据版权归数据集作者，不随项目再分发。",
+  "plant_capacity_mw": 30.0,
+  "features": [
+    "irradiance_kw_m2",
+    "ambient_temp_c",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "rows": 3157,
+  "target": "AC_POWER 聚合 / 30 MW 装机，裁剪到 [0,1]",
+  "model": "RandomForestRegressor(n_estimators=240, max_depth=12)",
+  "split": "按日期前 80%/后 20% 时序切分",
+  "metrics": {
+    "train_rows": 2487,
+    "test_rows": 670,
+    "train_start": "2020-05-15 00:00:00",
+    "train_end": "2020-06-10 23:45:00",
+    "test_start": "2020-06-11 00:00:00",
+    "test_end": "2020-06-17 23:45:00",
+    "mae": 0.007664284642077973,
+    "rmse": 0.015613094299471986,
+    "r2": 0.9964320776352138,
+    "baseline_mae": 0.03786033050937788,
+    "baseline_rmse": 0.061508929024678145,
+    "physical_mae_note": "物理基线为 irradiance*0.82，仅作同测试集对照"
+  },
+  "trained_at": "2026-10-22T12:06:42.704379+00:00"
+}
