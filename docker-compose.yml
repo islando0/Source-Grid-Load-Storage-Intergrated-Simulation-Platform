@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: snl-platform
+    ports:
+      - "8000:8000"
+    environment:
+      TZ: Asia/Shanghai
+    restart: unless-stopped

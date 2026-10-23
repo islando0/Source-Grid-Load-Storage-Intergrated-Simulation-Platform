@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pip-cache/
+.tmp/
+.nb-tmp/
+.jupyter-runtime/
+.wheels/
+.pytest_cache/
+pytest-cache-files-*
+
+# Node
+node_modules/
+frontend/dist/
+.npmcache/
+.npm-cache/
+frontend/.tmp/
+
+# Data and artifacts
+data/app.db
+data/platform.sqlite3
+data/processed/*
+data/output/*
+data/external/solar_power_generation/*.csv
+models/*
+!models/.gitkeep
+!models/pv_cf_model.joblib
+!models/pv_cf_metadata.json
+!data/processed/.gitkeep
+!data/output/.gitkeep
+
+# Local config
+.env
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
